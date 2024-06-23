@@ -29,7 +29,7 @@ let displayResult = (result)=>{
     let minmax = document.querySelector(".minmax");
     minmax.innerText = `${Math.round(result.main.temp_min/10)}°C / ${Math.round(result.main.temp_max/10)}°C`;
     console.log('This is a comment section');
-    console.log(main);
+    console.log(result.main);
 };
 
 
