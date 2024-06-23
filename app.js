@@ -22,11 +22,11 @@ let displayResult = (result)=>{
     city.innerText =   `${result.name},${result.sys.country}`;
 
     let temp = document.querySelector(".temperature");
-    temp.innerText = `${Math.round(result.main.temp/10)}°C`;
+    temp.innerText = `${Math.round(result.main.temp/1)}°C`;
     let desc = document.querySelector(".description");
     desc.innerText = result.weather[0].description;
     let minmax = document.querySelector(".minmax");
-    minmax.innerText = `${Math.round(result.main.temp_min/10)}°C / ${Math.round(result.main.temp_max/10)}°C`
+    minmax.innerText = `${Math.round(result.main.temp_min/1)}°C / ${Math.round(result.main.temp_max/1)}°C`
 };
 
 
