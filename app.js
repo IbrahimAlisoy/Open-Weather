@@ -18,6 +18,7 @@ let getResult = (cityName) => {
         .then(displayResult)
 }
 let displayResult = (result)=>{
+    
     let city = document.querySelector(".city");
     city.innerText =   `${result.name},${result.sys.country}`;
 
@@ -27,12 +28,15 @@ let displayResult = (result)=>{
     desc.innerText = result.weather[0].description;
     let minmax = document.querySelector(".minmax");
     minmax.innerText = `${Math.round(result.main.temp_min/10)}°C / ${Math.round(result.main.temp_max/10)}°C`;
-    console.log('This is a comment section')
-    console.log(main)
+    console.log('This is a comment section');
+    console.log(main);
 };
 
 
 
 let searchbar = document.getElementById("searchBar");
 
+
 searchbar.addEventListener("keypress", setQuery);
+searchbar.addEventListener("keypress", displayResult);
+
